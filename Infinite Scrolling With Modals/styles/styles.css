@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: azure;
+}
+.scroll__box {
+    height: 300px;
+    width: 200px;
+    overflow-y: scroll;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.element{
+    margin: 10px 0;
+    width: 100%;
+    padding: 5px;
+}
+.element:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+/* ============================= MODAL ============================== */
+.modal {
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: rgb(184, 181, 181);
+    display: none;
+    padding: 20px;
+}
+
+
+
+
+
