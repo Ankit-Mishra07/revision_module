@@ -5,7 +5,7 @@
 }
 
 .navbar__section{
-    background-image: url("https://www.bing.com/th?id=OIP.-cC5sip9ifSHZuXEKgLswwHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
+    background-image: url("https://cdn.pixabay.com/photo/2018/03/18/15/26/villa-3237114__340.jpg");
     height: 100vh;
     width: 100%;
     position: relative;
@@ -54,13 +54,13 @@
     outline: none;
     border: none;
     border-radius: 30px;
-    padding: 10px;
+    padding: 10px 16px;
     font-size: 18px;
     
 }
 .download{
     border: 1px solid #fff;
-    padding: 10px;
+    padding: 10px 16px;
     font-size: 18px;
     border-radius: 30px;
     outline: none;
@@ -123,7 +123,60 @@
 }
 
 
+/* ========================= APPRTMENTS SECTION =================== */
+.appartments__section{
+    margin-top: 20px;
+    width: 100%;
+}
+.appart__heading{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 26px;
+    color: rgb(32, 32, 32);
+    background-color: lightgray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+.appartments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 2;
+}
+.appartments > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+}
+.appartments > div > div {
+    width: 50%;
+    text-align: center;
+}
+.appartments > div > img {
+    width: 50%;
+}
+.app3, .app4{
+    flex-direction: row-reverse;
+}
+.stars {
+    color: orangered;
+}
+.viewbtn {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    border :1px solid gray; 
+}
+
+.item__app {
+    text-align: center;
+}
 
 
 @media only screen and (max-width:768px) {
@@ -141,6 +194,13 @@
         "b b b b b b b b"
         ;
     }
+    .appartments {
+        flex-direction: column;
+    }
+    .appartments> div {
+        width: 100%;
+    }
+
 }
 @media only screen and (max-width:426px) {
     .nav__btnbox{
@@ -163,5 +223,15 @@
         "d d d d d d d d"
         "b b b b b b b b"
         ;
+    }
+    .appartments> div {
+        flex-direction: column;
+        width: 100%;
+    }
+    .appartments> div > div {
+        width: 100%;
+    }
+    .appartments> div > img {
+        width: 100%;
     }
 }
