@@ -179,6 +179,37 @@
 }
 
 
+/* ============================ POSTS SECTION =============================== */
+.posts__section {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 30px;
+    margin-top: 30px;
+    
+}
+.posts__section > div > h1 {
+    margin: 20px 0;
+}
+
+.posts__box{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap:10px;
+}
+.post{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+
+}
+
+.abouts{
+    text-align: left;
+    font-size: 12px;
+}
+
 @media only screen and (max-width:768px) {
     .welcome{
         font-size: 18px;
@@ -199,6 +230,16 @@
     }
     .appartments> div {
         width: 100%;
+    }
+    .posts__section{
+        width: 100%;
+    }
+    .posts__box {
+        grid-template-columns: 100%;
+        padding: 10px;
+    }
+    .posts__box > div:nth-child(5), .posts__box > div:nth-child(6){
+        display: none;
     }
 
 }
@@ -233,5 +274,18 @@
     }
     .appartments> div > img {
         width: 100%;
+    }
+    .posts__section {
+        grid-template-columns: 100%;
+        padding: 10px;
+    }
+    .posts__section > div > h1 {
+        text-align: center;
+    }
+    .abouts{
+        text-align: center;
+    }
+    .icons{
+        text-align: center;
     }
 }
