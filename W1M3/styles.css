@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar__section{
+    background-image: url("https://www.bing.com/th?id=OIP.-cC5sip9ifSHZuXEKgLswwHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    color: white;
+
+}
+.top__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.menu__icon  .line{
+    background-color:#fff;
+    height: 2px;
+    width: 30px;
+    display: block;
+    margin: 5px;
+}
+
+.center__div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.nav__btnbox{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.nav__btnbox button {
+    cursor: pointer;
+    font-weight: 300;
+}
+.explore{
+    background-color: rgb(243, 13, 52);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 18px;
+    
+}
+.download{
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 30px;
+    outline: none;
+    background: none;
+    color: rgb(245, 244, 244);
+}
+
+
+@media only screen and (max-width:578px) {
+    .nav__btnbox{
+        flex-direction: column;
+    }
+    .welcome{
+        font-size: 18px;
+    }
+    .lorem{
+        font-size: 10px;
+    }
+}
