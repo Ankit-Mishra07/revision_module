@@ -210,6 +210,29 @@
     font-size: 12px;
 }
 
+/* =======================TAGS SECTION ============================ */
+.tag__section {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+.tag__box{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tag__box > button {
+    padding: 6px 10px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
 @media only screen and (max-width:768px) {
     .welcome{
         font-size: 18px;
@@ -240,6 +263,14 @@
     }
     .posts__box > div:nth-child(5), .posts__box > div:nth-child(6){
         display: none;
+    }
+    .tag__section{
+        width: 90%;
+        text-align: left;
+    }
+    .tag__box{
+        width: 100%;
+        justify-content: flex-start;
     }
 
 }
@@ -287,5 +318,13 @@
     }
     .icons{
         text-align: center;
+    }
+    .tag__section{
+        width: 100%;
+        text-align: center;
+    }
+    .tag__box{
+        width: 100%;
+        justify-content: center;
     }
 }
