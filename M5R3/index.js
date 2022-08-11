@@ -1,4 +1,5 @@
 const url = "https://m5r3server.herokuapp.com/api/data";
+let DATA = [];
 async function handleSubmitData(event) {
   event.preventDefault();
   let country = document.getElementById("country").value;
@@ -31,6 +32,7 @@ async function handleSubmitData(event) {
 async function fetchData() {
   let res = await fetch(url);
   let dat = await res.json();
+  DATA = [...dat];
   displayData(dat);
 }
 fetchData();
@@ -111,4 +113,30 @@ async function EditPost(event) {
       hidemodal();
       fetchData();
     });
+}
+
+function filterbyCountry() {
+  let filter_country = document.getElementById("filter_country").value;
+
+  fetch(`${url}?country=${filter_country}`)
+    .then((res) => res.json())
+    .then((res) => {
+      displayData(res);
+    });
+}
+
+function sortby() {
+  let sortbyPopu = document.getElementById("sortbyPopu").value;
+
+  if (sortbyPopu === "LtoH") {
+    let data = DATA.sort((a, b) => {
+      return a.population - b.population;
+    });
+    displayData(data);
+  } else if (sortbyPopu === "HtoL") {
+    let data = DATA.sort((a, b) => {
+      return b.population - a.population;
+    });
+    displayData(data);
+  }
 }

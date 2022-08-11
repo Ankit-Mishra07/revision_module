@@ -77,7 +77,11 @@
         </form>
         <div class="filter__cont">
           <h1>Filter Options</h1>
-          <select id="filter_country" name="filter_country">
+          <select
+            id="filter_country"
+            name="filter_country"
+            onchange="filterbyCountry()"
+          >
             <option>Country</option>
             <option value="Afghanistan">Afghanistan</option>
             <option value="Aland Islands">Aland Islands</option>
@@ -136,7 +140,7 @@
             <option value="India">India</option>
             <option value="Indonesia">Indonesia</option>
           </select>
-          <select id="sortbyPopu">
+          <select id="sortbyPopu" onchange="sortby()">
             <option>Sort by population</option>
             <option value="LtoH">Low to high</option>
             <option value="HtoL">High to low</option>
@@ -165,7 +169,7 @@
     <div class="modal">
       <form class="form_edit" onsubmit="EditPost(event)">
         <h1>
-          Add Country Data <button class="X" onclick="hidemodal()">X</button>
+          Edit Country Data <button class="X" onclick="hidemodal()">X</button>
         </h1>
         <select id="edit_country" name="country">
           <option>Country</option>
