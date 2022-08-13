@@ -118,7 +118,7 @@ function displayData() {
       el.forEach((item, i) => {
         let alphaDiv = document.createElement("div");
         alphaDiv.setAttribute("class", "alphaDiv");
-        alphaDiv.innerText = item;
+        alphaDiv.innerHTML = item + `<sup>${Allalphabets[item]}</sup>`;
         alphaDiv.addEventListener("click", () => {
           RemoveAndSave(index1, index2, i, item);
         });
