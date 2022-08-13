@@ -1,31 +1,31 @@
-const Allalphabets = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+const Allalphabets = {
+  A: 1,
+  B: 3,
+  C: 3,
+  D: 2,
+  E: 1,
+  F: 4,
+  G: 2,
+  H: 4,
+  I: 1,
+  J: 8,
+  K: 5,
+  L: 1,
+  M: 3,
+  N: 1,
+  O: 1,
+  P: 3,
+  Q: 10,
+  R: 1,
+  S: 1,
+  T: 1,
+  U: 1,
+  V: 4,
+  W: 4,
+  X: 8,
+  Y: 4,
+  Z: 10,
+};
 
 let vowels = ["A", "E", "I", "O", "U"];
 let consonants = [
@@ -53,6 +53,20 @@ let consonants = [
 ];
 
 const game__container = document.querySelector(".game__container");
+
+let timer = document.querySelector(".timer");
+let time = 99;
+let int = setInterval(() => {
+  time--;
+  timer.innerText = time;
+  if (time <= 0) {
+    clearInterval(int);
+    let score = document.querySelector(".score").innerText;
+    alert(`Time up, \n Your Score is : ${score}`);
+    window.location.href = "index.html";
+  }
+}, 1000);
+
 const matrix = [[], [], [], []];
 function createArrays() {
   consonants = consonants.sort(() => Math.random() - 0.5);
@@ -75,6 +89,18 @@ function createArrays() {
 for (let i = 0; i < 5; i++) {
   createArrays();
 }
+let moves = 10;
+function getMatLength() {
+  // let getlength = matrix.flat(2).length;
+  let tile_left = document.querySelector(".tile_left");
+  tile_left.innerText = moves--;
+  if (moves < 0) {
+    let score = document.querySelector(".score").innerText;
+    alert(`No Moves left, \n Your Score is : ${score}`);
+    window.location.href = "index.html";
+  }
+}
+getMatLength();
 
 function displayData() {
   let alpha_container = document.querySelector(".alpha_container");
@@ -117,11 +143,21 @@ function displayData() {
 }
 
 displayData();
-
+let storedElement = [];
+let score = document.querySelector(".score");
+let sum = 0;
 function RemoveAndSave(index1, index2, i, item) {
-  console.log("check delete", matrix);
   let Dltelement = matrix[index1][index2].splice(i, 1);
-  console.log("check delete", matrix);
-  console.log("check delete elemtn", Dltelement);
+  sum += Allalphabets[Dltelement[0]];
+  score.innerText = sum;
+  storedElement.push(...Dltelement);
+  displayStoredElementS();
   displayData();
+  getMatLength();
+}
+
+function displayStoredElementS() {
+  let store_elements = document.querySelector(".store_elements");
+
+  store_elements.innerText = storedElement.join("");
 }
