@@ -6,5 +6,29 @@
       "population": "123467",
       "id": 1
     }
+  ],
+  "hotel": [
+    {
+      "category": "Family",
+      "image_url": "https://cdn.pixabay.com/photo/2020/10/18/09/16/bedroom-5664221__340.jpg",
+      "type_of_room": "AC",
+      "bed_type": "single",
+      "no_of_persons": "2",
+      "capacity": "3",
+      "cost": "1000",
+      "booked": true,
+      "id": 1
+    },
+    {
+      "category": "Suite",
+      "image_url": "https://cdn.pixabay.com/photo/2020/10/18/09/16/bedroom-5664221__340.jpg",
+      "type_of_room": "nonAC",
+      "bed_type": "double",
+      "no_of_persons": "3",
+      "capacity": "3",
+      "cost": "2000",
+      "booked": false,
+      "id": 2
+    }
   ]
 }
