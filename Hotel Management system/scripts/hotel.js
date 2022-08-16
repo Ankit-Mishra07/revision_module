@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/api/hotel";
+let url = "https://m5r3server.herokuapp.com/api/hotel";
 let DATA = [];
 let cards__container = document.querySelector(".cards__container");
 
