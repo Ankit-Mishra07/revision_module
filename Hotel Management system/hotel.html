@@ -4,9 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/hotel.css" />
     <title>Document</title>
   </head>
   <body>
-    Hotel
+    <h1 class="head">Hotel Management : Book your rooms here</h1>
+    <div class="cards__container">
+      <div class="card">
+        <img
+          class="room_image"
+          src="https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156__340.jpg"
+          alt=""
+        />
+        <div class="room_detail_box">
+          <h3><i>Family room</i></h3>
+          <hr />
+          <div class="details_box">
+            <div>
+              <span>Adults</span>
+              <span>4</span>
+            </div>
+            <div>
+              <span>capacity</span>
+              <span>Max capacity 3</span>
+            </div>
+            <div>
+              <span>Facilities</span>
+              <span>Closet with hangers, HD TV</span>
+            </div>
+            <div>
+              <span>Bed type</span>
+              <span>One bed</span>
+            </div>
+            <div>
+              <span>Price</span>
+              <span>₹4000<span class="night_text">/night</span></span>
+            </div>
+          </div>
+          <button class="book_nowbtn">Book now</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+<script src="./scripts/hotel.js"></script>
