@@ -114,3 +114,62 @@ button:active {
   border: none;
   border-radius: 5px;
 }
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+.modal_content_main {
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+}
+.top_nav > h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.modal_content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.modal_content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+}
+
+.top_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top_nav > button {
+  align-self: flex-start;
+}
+.X {
+  margin-left: 20px;
+  vertical-align: middle;
+  background-color: crimson;
+  color: white;
+  padding: 5px 12px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

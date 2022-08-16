@@ -46,13 +46,67 @@ function displayData(data) {
               <span>₹${el.cost}<span class="night_text">/night</span></span>
             </div>
           </div>
-          <button class="book_nowbtn">Book now</button>
+          <button class="book_nowbtn"  id="bookbtn" onclick="bookNowHere(${el.id})">Book now</button>
         </div>
         `;
+
     cards__container.append(card);
   });
 }
 
+async function bookNowHere(id) {
+  event.preventDefault();
+  let modal = document.querySelector(".modal");
+  modal.style.display = "flex";
+  console.log("hell", id);
+  let item;
+  await fetch(`${url}/${id}`)
+    .then((res) => res.json())
+    .then((res) => {
+      item = res;
+    });
+  let userData = JSON.parse(localStorage.getItem("hotel_user"));
+  let modal_content = document.querySelector(".modal_content");
+  modal_content.innerHTML = `<div>
+              <span>Name</span>
+              <span>Mobile</span>
+              <span>JD proof</span>
+              <span>Room type</span>
+              <span>No. of persons</span>
+              <span>Days of stay</span>
+              <span>Subtoal</span>
+              <span>GST</span>
+              <span>Total</span>
+            </div>
+            <div>
+              <span>${userData.username}</span>
+              <span>7000081170</span>
+              <span>Aadhar Card</span>
+              <span>${item.category}</span>
+              <span>${item.no_of_persons}</span>
+              <span>3</span>
+              <span>Rs. 12000/-</span>
+              <span>Rs. 720/-</span>
+              <span>Rs. 12720/-</span>
+            </div>
+    `;
+  item.booked = true;
+  fetch(`${url}/${item.id}`, {
+    method: "PATCH",
+    body: JSON.stringify(item),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      alert("Booked Successfully");
+    });
+}
+function hideModal() {
+  let modal = document.querySelector(".modal");
+  modal.style.display = "none";
+}
 function filterCategory() {
   let filter_category = document.getElementById("filter_category").value;
   filter(filter_category);

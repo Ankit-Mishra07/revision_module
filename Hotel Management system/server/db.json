@@ -8,11 +8,11 @@
       "no_of_persons": "2",
       "capacity": "3",
       "cost": "1000",
-      "booked": false,
+      "booked": true,
       "id": 1
     },
     {
-      "category": "Deluxe",
+      "category": "Suite",
       "image_url": "https://cdn.pixabay.com/photo/2020/10/18/09/16/bedroom-5664221__340.jpg",
       "type_of_room": "nonAC",
       "bed_type": "double",
