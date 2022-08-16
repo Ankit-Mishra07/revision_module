@@ -73,6 +73,14 @@ tbody > tr:nth-child(odd) {
 .delete {
   cursor: pointer;
 }
+.delete:hover {
+  background-color: crimson;
+  color: #fff;
+}
+.edit:hover {
+  background-color: #3399dd;
+  color: #fff;
+}
 
 .modal {
   display: flex;
