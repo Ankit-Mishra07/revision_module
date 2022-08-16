@@ -21,6 +21,7 @@ button:active {
   justify-content: center;
   width: 90%;
   margin: auto;
+  padding-bottom: 50px;
 }
 
 .card {
@@ -33,6 +34,10 @@ button:active {
   margin: auto;
   background-color: #fff;
   border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.card:hover {
+  transform: scale(1.03);
 }
 .room_image {
   width: 100%;
@@ -83,4 +88,29 @@ button:active {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.4s ease;
+}
+.book_nowbtn:active {
+  transform: scale(0.9);
+}
+.book_nowbtn:hover {
+  transform: scale(1.02);
+}
+
+.select_box {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+}
+.select_box select {
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
