@@ -1,0 +1,31 @@
+.data_form {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  gap: 20px;
+}
+.data_form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.data_form > div input,
+.data_form > div select {
+  padding: 8px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.data_form > div button {
+  padding: 12px 20px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #3399dd;
+  color: #fff;
+  vertical-align: baseline;
+  margin-top: 15px;
+}

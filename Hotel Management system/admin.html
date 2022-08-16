@@ -4,30 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/admin.css" />
     <title>Hotem Management System - Admin</title>
   </head>
   <body>
     <form class="data_form">
-      <select id="category">
-        <option>Category</option>
-        <option value="Family">Family</option>
-        <option value="Deluxe">Deluxe</option>
-        <option value="Suite">Suite</option>
-      </select>
-      <input type="text" placeholder="room image url" />
-      <label for="AC">AC</label>
-      <input type="radio" id="AC" name="roomtype" value="AC" />
-      <label for="nonAC">Non AC</label>
-      <input type="radio" id="nonAC" name="roomtype" value="nonAC" />
+      <div>
+        <select id="category">
+          <option>Category</option>
+          <option value="Family">Family</option>
+          <option value="Deluxe">Deluxe</option>
+          <option value="Suite">Suite</option>
+        </select>
+        <select id="bedtype">
+          <option>Bed type</option>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+        </select>
+      </div>
 
-      <select id="bedtype">
-        <option>Bed type</option>
-        <option value="single">Single</option>
-        <option value="double">Double</option>
-      </select>
-      <input type="text" placeholder="number of adults" />
-      <input type="text" placeholder="Max capacity" />
-      <input type="text" placeholder="cost per night in Rs" />
+      <div>
+        <input type="text" placeholder="room image url" />
+        <input type="text" placeholder="number of adults" />
+      </div>
+      <div>
+        <input type="text" placeholder="Max capacity" />
+        <input type="text" placeholder="cost per night in Rs" />
+      </div>
+
+      <div>
+        <span>
+          <label for="AC">AC</label>
+          <input type="radio" id="AC" name="roomtype" value="AC" />
+          <label for="nonAC">Non AC</label>
+          <input type="radio" id="nonAC" name="roomtype" value="nonAC" />
+        </span>
+        <button>Submit</button>
+      </div>
     </form>
   </body>
 </html>
+<script src="./scripts//admin.js"></script>

@@ -20,3 +20,12 @@ function showRegisterForm() {
   login_text.classList.remove("active_tab");
   register_text.classList.add("active_tab");
 }
+
+function handleLogin(event) {
+  event.preventDefault();
+  let login_email = document.getElementById("login_email").value;
+  let login_pass = document.getElementById("login_pass").value;
+  if (login_email === "admin@gmail.com" && login_pass === "masai") {
+    window.location.href = "admin.html";
+  }
+}
