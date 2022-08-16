@@ -21,11 +21,52 @@ function showRegisterForm() {
   register_text.classList.add("active_tab");
 }
 
+// =====================  SINGUP ======================
+
+function handleSignup(event) {
+  event.preventDefault();
+  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let confirm_password = document.getElementById("confirm_password").value;
+
+  if (!username || !email || !password || !confirm_password) {
+    alert("Please fill all the required data");
+    return;
+  }
+  if (confirm_password !== password) {
+    alert("Password and confirm password is not matching");
+    return;
+  }
+  const payload = {
+    username,
+    email,
+    password,
+    confirm_password,
+  };
+  localStorage.setItem("hotel_user", JSON.stringify(payload));
+  showLoginForm();
+}
+
+// ========================= LOGIN ======================
 function handleLogin(event) {
   event.preventDefault();
   let login_email = document.getElementById("login_email").value;
   let login_pass = document.getElementById("login_pass").value;
   if (login_email === "admin@gmail.com" && login_pass === "masai") {
     window.location.href = "admin.html";
+    return;
+  }
+
+  let getSignupData = JSON.parse(localStorage.getItem("hotel_user"));
+  if (
+    login_email !== getSignupData.email ||
+    login_pass !== getSignupData.password
+  ) {
+    alert("Wrong credentials, login failed!");
+    return;
+  } else {
+    alert("Logged in successfully🎉");
+    window.location.href = "hotel.html";
   }
 }

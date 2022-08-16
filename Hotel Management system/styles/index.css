@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+button:active {
+  transform: scale(0.9);
+}
+
 .main__container {
   display: flex;
   justify-content: center;
