@@ -8,40 +8,77 @@
     <title>Hotem Management System - Admin</title>
   </head>
   <body>
-    <form class="data_form">
-      <div>
-        <select id="category">
-          <option>Category</option>
-          <option value="Family">Family</option>
-          <option value="Deluxe">Deluxe</option>
-          <option value="Suite">Suite</option>
-        </select>
-        <select id="bedtype">
-          <option>Bed type</option>
-          <option value="single">Single</option>
-          <option value="double">Double</option>
-        </select>
-      </div>
+    <div class="inputs_container">
+      <h1>Admin Panel</h1>
+      <h3>Please enter hotel room data below</h3>
+      <form class="data_form" onsubmit="handleSubmitData(event)">
+        <div>
+          <select id="category">
+            <option>Category</option>
+            <option value="Family">Family</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Suite">Suite</option>
+          </select>
+          <select id="bedtype">
+            <option>Bed type</option>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+          </select>
+        </div>
 
-      <div>
-        <input type="text" placeholder="room image url" />
-        <input type="text" placeholder="number of adults" />
-      </div>
-      <div>
-        <input type="text" placeholder="Max capacity" />
-        <input type="text" placeholder="cost per night in Rs" />
-      </div>
+        <div>
+          <input type="text" placeholder="room image url" />
+          <input type="text" placeholder="number of adults" />
+        </div>
+        <div>
+          <input type="text" placeholder="Max capacity" />
+          <input type="text" placeholder="cost per night in Rs" />
+        </div>
 
-      <div>
-        <span>
-          <label for="AC">AC</label>
-          <input type="radio" id="AC" name="roomtype" value="AC" />
-          <label for="nonAC">Non AC</label>
-          <input type="radio" id="nonAC" name="roomtype" value="nonAC" />
-        </span>
-        <button>Submit</button>
-      </div>
-    </form>
+        <div>
+          <span>
+            <label for="AC">AC</label>
+            <input type="radio" id="AC" name="roomtype" value="AC" />
+            <label for="nonAC">Non AC</label>
+            <input type="radio" id="nonAC" name="roomtype" value="nonAC" />
+          </span>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <br />
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Category</th>
+          <th>Room Type</th>
+          <th>Bet Type</th>
+          <th>No of persons</th>
+          <th>Capacity</th>
+          <th>Cost</th>
+          <th>Status</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ID</td>
+          <td>Category</td>
+          <td>Room Type</td>
+          <td>Bet Type</td>
+          <td>No of persons</td>
+          <td>Capacity</td>
+          <td>Cost</td>
+          <td>Status</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
 <script src="./scripts//admin.js"></script>
