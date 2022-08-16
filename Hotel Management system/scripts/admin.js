@@ -91,3 +91,96 @@ function DeleteData(id) {
       fetchData();
     });
 }
+
+// =========== Edit Data ============
+
+let ID = null;
+function EditData(id) {
+  let edit_category = document.getElementById("edit_category");
+  let edit_bedtype = document.getElementById("edit_bedtype");
+  let edit_room_img = document.getElementById("edit_room_img");
+  let edit_adults = document.getElementById("edit_adults");
+  let edit_max_capacity = document.getElementById("edit_max_capacity");
+  let edit_cost_night = document.getElementById("edit_cost_night");
+  let edit_roomType = document.querySelector(
+    'input[name="edit_roomtype"]:checked'
+  );
+
+  fetch(`${url}/${id}`)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      edit_category.value = res.category;
+      edit_bedtype.value = res.bed_type;
+      edit_room_img.value = res.image_url;
+      edit_adults.value = res.no_of_persons;
+      edit_max_capacity.value = res.capacity;
+      edit_cost_night.value = res.cost;
+      let modal = document.querySelector(".modal");
+      modal.style.display = "flex";
+      ID = res.id;
+    });
+}
+function hidemodal() {
+  let edit_roomType = document.querySelector(
+    'input[name="edit_roomtype"]:checked'
+  );
+  if (!edit_roomType) {
+    alert("Please choose room type: AC/nonAC");
+    return;
+  }
+  let modal = document.querySelector(".modal");
+  modal.style.display = "none";
+}
+
+async function EditPost(event) {
+  event.preventDefault();
+  let edit_category = document.getElementById("edit_category").value;
+  let edit_bedtype = document.getElementById("edit_bedtype").value;
+  let edit_room_img = document.getElementById("edit_room_img").value;
+  let edit_adults = document.getElementById("edit_adults").value;
+  let edit_max_capacity = document.getElementById("edit_max_capacity").value;
+  let edit_cost_night = document.getElementById("edit_cost_night").value;
+  let edit_roomType = document.querySelector(
+    'input[name="edit_roomtype"]:checked'
+  );
+  if (!edit_roomType) {
+    alert("Please choose room type: AC/nonAC");
+    return;
+  }
+  if (
+    !edit_category ||
+    !edit_bedtype ||
+    !edit_room_img ||
+    !edit_adults ||
+    !edit_max_capacity ||
+    !edit_cost_night ||
+    !edit_roomType
+  ) {
+    alert("Please fill all data");
+    return;
+  }
+  let obj = {
+    category: edit_category,
+    image_url: edit_room_img,
+    type_of_room: edit_roomType.value,
+    bed_type: edit_bedtype,
+    no_of_persons: edit_adults,
+    capacity: edit_max_capacity,
+    cost: edit_cost_night,
+    booked: false,
+  };
+  await fetch(`${url}/${ID}`, {
+    method: "PATCH",
+    body: JSON.stringify(obj),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      alert("Edited Successfully");
+      hidemodal();
+      fetchData();
+    });
+}

@@ -83,6 +83,47 @@
         </tr> -->
       </tbody>
     </table>
+
+    <!--================================== Edit Modal ==============================-->
+    <div class="modal">
+      <form class="form_edit" onsubmit="EditPost(event)">
+        <h1>Edit Data <button class="X" onclick="hidemodal()">X</button></h1>
+
+        <select id="edit_category">
+          <option>Category</option>
+          <option value="Family">Family</option>
+          <option value="Deluxe">Deluxe</option>
+          <option value="Suite">Suite</option>
+        </select>
+        <select id="edit_bedtype">
+          <option>Bed type</option>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+        </select>
+
+        <input type="text" placeholder="room image url" id="edit_room_img" />
+        <input type="text" placeholder="number of adults" id="edit_adults" />
+        <input type="text" placeholder="Max capacity" id="edit_max_capacity" />
+        <input
+          type="text"
+          placeholder="cost per night in Rs"
+          id="edit_cost_night"
+        />
+
+        <div>
+          <label for="edit_AC">AC</label>
+          <input type="radio" id="edit_AC" name="edit_roomtype" value="AC" />
+          <label for="edit_nonAC">Non AC</label>
+          <input
+            type="radio"
+            id="edit_nonAC"
+            name="edit_roomtype"
+            value="nonAC"
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
 <script src="./scripts//admin.js"></script>
