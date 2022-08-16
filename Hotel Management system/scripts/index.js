@@ -1,3 +1,5 @@
+let url = "https://m5r3server.herokuapp.com/api/hotel";
+
 let login_text = document.querySelector(".login_text");
 let register_text = document.querySelector(".register_text");
 let login_box = document.querySelector(".login_box");
