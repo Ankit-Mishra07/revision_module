@@ -8,11 +8,13 @@ import RegisterPage from "../Pages/RegisterPage";
 import SingleEmployee from "../Pages/SingleEmployee";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../components/Navbar";
 
 const Routing = () => {
   return (
     <>
       <ToastContainer />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>

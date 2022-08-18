@@ -9,10 +9,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Register from "../components/Register";
-import { setLocal } from "../utils/localUtil";
-
+import { useDispatch } from "react-redux";
+import { registerFail, registerSuccess } from "../Redux/Actions/userAction";
 const RegisterPage = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleSubmit = (payload) => {
     fetch("https://masai-api-mocker.herokuapp.com/auth/register", {
       method: "POST",
@@ -24,10 +25,11 @@ const RegisterPage = () => {
       .then((res) => res.json())
       .then((res) => {
         if (res.error === false) {
-          navigate("/login");
+          dispatch(registerSuccess(payload));
           toast("Registered Successfully");
-          setLocal(payload);
+          navigate("/login");
         } else {
+          dispatch(registerFail());
           toast("User already exists plese try with different data");
         }
       });
