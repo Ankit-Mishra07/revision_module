@@ -80,7 +80,7 @@ const SingleEmployee = () => {
           <Stack direction="row" spacing={4}>
             <Button bg={"linkedin.400"} color="whiteAlpha.900">
               {" "}
-              Edit
+              <Link to={`/employees/${property.id}/edit`}>Edit</Link>
             </Button>
             <Button bg={"red.400"} color="whiteAlpha.900">
               {" "}

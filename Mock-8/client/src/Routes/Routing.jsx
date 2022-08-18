@@ -9,6 +9,7 @@ import SingleEmployee from "../Pages/SingleEmployee";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../components/Navbar";
+import EditEmplyeePage from "../Pages/EditEmplyeePage";
 
 const Routing = () => {
   return (
@@ -22,6 +23,7 @@ const Routing = () => {
         <Route path="/employees" element={<EmployeePage />}></Route>
         <Route path="/employees/create" element={<CreateEmployee />}></Route>
         <Route path="/employees/:id" element={<SingleEmployee />}></Route>
+        <Route path="/employees/:id/edit" element={<EditEmplyeePage />}></Route>
       </Routes>
     </>
   );
