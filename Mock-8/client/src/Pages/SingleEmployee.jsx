@@ -7,23 +7,30 @@ import { useId } from "react";
 import { useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const SingleEmployee = () => {
   const { id } = useParams();
   const [property, setProperty] = useState({});
+  const [loading, setLoading] = useState(false);
+
   const fetchEmployee = async () => {
     let res = await fetch(
       `https://m5r3server.herokuapp.com/api/employee/${id}`
     );
     let data = await res.json();
     setProperty(data);
+    setLoading(false);
   };
   const ID = useId();
   useEffect(() => {
+    setLoading(true);
     fetchEmployee();
   }, []);
   return (
     <div>
+      {loading && <Loading />}
+
       <Box borderRadius="lg" display="flex" width={"100%"} margin="30px">
         <Image src={property.image} alt="uch" width={"50%"} />
         <Box p="6">
