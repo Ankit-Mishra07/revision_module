@@ -6,9 +6,13 @@ import Home from "../Pages/Home";
 import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
 import SingleEmployee from "../Pages/SingleEmployee";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Routing = () => {
   return (
     <>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
