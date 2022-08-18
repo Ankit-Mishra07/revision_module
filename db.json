@@ -30,5 +30,107 @@
       "booked": false,
       "id": 2
     }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Drusilla",
+      "age": 55,
+      "gender": "Bigender",
+      "mobile": "4599326259",
+      "image": "http://dummyimage.com/164x100.png/ff4444/ffffff",
+      "department": "Product Management",
+      "salary": 376826
+    },
+    {
+      "id": 2,
+      "name": "Muhammad",
+      "age": 24,
+      "gender": "Male",
+      "mobile": "8075592506",
+      "image": "http://dummyimage.com/163x100.png/dddddd/000000",
+      "department": "Product Management",
+      "salary": 595802
+    },
+    {
+      "id": 3,
+      "name": "Bevin",
+      "age": 78,
+      "gender": "Male",
+      "mobile": "9481192539",
+      "image": "http://dummyimage.com/229x100.png/cc0000/ffffff",
+      "department": "Human Resources",
+      "salary": 236037
+    },
+    {
+      "id": 4,
+      "name": "Berke",
+      "age": 72,
+      "gender": "Genderqueer",
+      "mobile": "3592295039",
+      "image": "http://dummyimage.com/227x100.png/cc0000/ffffff",
+      "department": "Legal",
+      "salary": 3274
+    },
+    {
+      "id": 5,
+      "name": "Celestine",
+      "age": 90,
+      "gender": "Genderqueer",
+      "mobile": "6942610623",
+      "image": "http://dummyimage.com/234x100.png/ff4444/ffffff",
+      "department": "Services",
+      "salary": 479447
+    },
+    {
+      "id": 6,
+      "name": "Dewitt",
+      "age": 30,
+      "gender": "Male",
+      "mobile": "8454496440",
+      "image": "http://dummyimage.com/128x100.png/5fa2dd/ffffff",
+      "department": "Research and Development",
+      "salary": 409721
+    },
+    {
+      "id": 7,
+      "name": "Kimmy",
+      "age": 33,
+      "gender": "Female",
+      "mobile": "8796995238",
+      "image": "http://dummyimage.com/167x100.png/5fa2dd/ffffff",
+      "department": "Product Management",
+      "salary": 737592
+    },
+    {
+      "id": 8,
+      "name": "Nyssa",
+      "age": 97,
+      "gender": "Female",
+      "mobile": "9989697302",
+      "image": "http://dummyimage.com/181x100.png/5fa2dd/ffffff",
+      "department": "Business Development",
+      "salary": 648854
+    },
+    {
+      "id": 9,
+      "name": "Cristina",
+      "age": 96,
+      "gender": "Female",
+      "mobile": "7745338832",
+      "image": "http://dummyimage.com/175x100.png/cc0000/ffffff",
+      "department": "Product Management",
+      "salary": 184149
+    },
+    {
+      "id": 10,
+      "name": "Erin",
+      "age": 49,
+      "gender": "Male",
+      "mobile": "1190693658",
+      "image": "http://dummyimage.com/169x100.png/ff4444/ffffff",
+      "department": "Support",
+      "salary": 262487
+    }
   ]
 }
