@@ -45,7 +45,7 @@ const EmployeePage = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "10px",
+        gap: "20px",
         width: "60%",
         justifyContent: "center",
         alignItems: "center",
@@ -54,7 +54,7 @@ const EmployeePage = () => {
       }}
     >
       <Button>
-        <Link to="/">Add New Employee</Link>
+        <Link to="/employees/create">Add New Employee</Link>
       </Button>
       {data?.map((property) => (
         <Box

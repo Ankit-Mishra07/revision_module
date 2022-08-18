@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useId } from "react";
 import { useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 const SingleEmployee = () => {
   const { id } = useParams();
@@ -87,6 +88,13 @@ const SingleEmployee = () => {
             </Button>
           </Stack>
         </Box>
+      </Box>
+      <br />
+      <Box textAlign={"center"}>
+        <Button bg={"linkedin.400"} color="whiteAlpha.900">
+          {" "}
+          <Link to="/employees"> Go back</Link>
+        </Button>
       </Box>
     </div>
   );

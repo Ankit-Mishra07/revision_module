@@ -8,7 +8,7 @@ const EmployeeCard = ({ property, handleDelete }) => {
   return (
     <>
       <Box borderRadius="lg" display="flex" width={"100%"}>
-        <Image src={property.image} alt="uch" width={"50%"} />
+        <Image src={property.image} alt="uch" width={"50%"} height="300px" />
         <Box p="6">
           <Box display="flex" alignItems="baseline">
             <Badge borderRadius="full" px="2" colorScheme="teal">
