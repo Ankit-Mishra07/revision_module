@@ -54,7 +54,7 @@ const EmployeeCard = ({ property, handleDelete }) => {
           <Stack direction="row" spacing={4}>
             <Button bg={"linkedin.400"} color="whiteAlpha.900">
               {" "}
-              <Link to={`/employee/${property.id}`}>View</Link>
+              <Link to={`/employees/${property.id}`}>View</Link>
             </Button>
             <Button
               bg={"red.400"}

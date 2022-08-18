@@ -4,16 +4,27 @@ import { useEffect } from "react";
 import { useState } from "react";
 import EmployeeCard from "../components/EmployeeCard";
 import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@chakra-ui/button";
 
 const EmployeePage = () => {
   const [data, setData] = useState([]);
+  const { userInfo, success, error } = useSelector(
+    (state) => state.registerState
+  );
+  const navigate = useNavigate();
   const fetchEmployees = async () => {
     let res = await fetch("https://m5r3server.herokuapp.com/api/employee");
     let data = await res.json();
     setData(data);
   };
   useEffect(() => {
-    fetchEmployees();
+    if (userInfo) {
+      fetchEmployees();
+    } else {
+      navigate("/login");
+    }
   }, []);
 
   const handleDelete = (id) => {
@@ -42,6 +53,9 @@ const EmployeePage = () => {
         marginTop: "30px",
       }}
     >
+      <Button>
+        <Link to="/">Add New Employee</Link>
+      </Button>
       {data?.map((property) => (
         <Box
           borderWidth="1px"

@@ -2,7 +2,6 @@ import { Box, Heading } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getLocal } from "../utils/localUtil";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -17,6 +16,7 @@ const Home = () => {
       setUser(userInfo);
     }
   }, []);
+
   return (
     <Box
       style={{
