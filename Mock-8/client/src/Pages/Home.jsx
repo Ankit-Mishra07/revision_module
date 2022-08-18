@@ -38,13 +38,24 @@ const Home = () => {
             " rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
           padding: 20,
           boxSizing: "border-box",
+          borderRadius: "10px",
         }}
       >
-        <Box>Name : {user?.name}</Box>
-        <Box>Mobile no. : {user?.mobile}</Box>
-        <Box>Username : {user?.username}</Box>
-        <Box>Email : {user?.email}</Box>
-        <Box>Description : {user?.description}</Box>
+        <Box>
+          <strong> Name:</strong> {user?.name}
+        </Box>
+        <Box>
+          <strong> Mobile no.:</strong> {user?.mobile}
+        </Box>
+        <Box>
+          <strong>Username:</strong> {user?.username}
+        </Box>
+        <Box>
+          <strong> Email:</strong> {user?.email}
+        </Box>
+        <Box>
+          <strong>Description:</strong> {user?.description}
+        </Box>
       </Box>
     </Box>
   );
