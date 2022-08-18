@@ -1,13 +1,20 @@
-import { Box, Tab, TabList } from "@chakra-ui/react";
+import { Box, Button, Tab, TabList } from "@chakra-ui/react";
 import React from "react";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../Redux/Actions/userAction";
 import Register from "./Register";
 
 const Navbar = () => {
   const { userInfo, success, error } = useSelector(
     (state) => state.registerState
   );
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
   return (
     <>
       <Box
@@ -25,7 +32,9 @@ const Navbar = () => {
         </Box>
         <Box display={"flex"} gap="10px">
           {userInfo ? (
-            <Link to="/login">Logout</Link>
+            <Button bg="red.300" onClick={handleLogout}>
+              Logout
+            </Button>
           ) : (
             <>
               <Link to="/login">Login</Link>

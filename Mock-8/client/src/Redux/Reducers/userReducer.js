@@ -1,5 +1,6 @@
 import { getLocal, setLocal } from "../../utils/localUtil";
 import {
+  LOGOUT,
   USER_REGISTER_FAIL,
   USER_REGISTER_SUCCESS,
 } from "../Contants/userContants";
@@ -19,6 +20,10 @@ export const registerReducer = (state = init, { type, payload }) => {
       return {
         error: true,
         success: false,
+      };
+    case LOGOUT:
+      return {
+        userInfo: null,
       };
     default:
       return state;
