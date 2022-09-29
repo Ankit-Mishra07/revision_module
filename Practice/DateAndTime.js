@@ -28,3 +28,5 @@ let time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 console.log(time); // 11:46:30
 
 /* Creator: Ankit Mishra */
+
+let date = new Date();
