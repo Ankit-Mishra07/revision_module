@@ -30,3 +30,6 @@ console.log(time); // 11:46:30
 /* Creator: Ankit Mishra */
 
 let date = new Date();
+let str = "hello";
+str.test = 5;
+console.log(str.test);
