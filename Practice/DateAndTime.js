@@ -29,7 +29,26 @@ console.log(time); // 11:46:30
 
 /* Creator: Ankit Mishra */
 
-let date = new Date();
-let str = "hello";
-str.test = 5;
-console.log(str.test);
+// Date and time in JavaScript
+
+// const options = {
+//   weekday: "long",
+//   year: "numeric",
+//   month: "long",
+//   day: "numeric",
+// };
+
+// new Date().toLocaleDateString("en-US", options);
+// // output -> "Sunday, November 1, 2022"
+
+// new Date().toLocaleDateString("hi", options);
+// // output -> "रविवार, 1 नवंबर 2022"
+
+// const time = new Date().toLocaleTimeString("en-US", {
+//   hour: "2-digit",
+//   minute: "2-digit",
+// });
+
+// console.log(time); // "11:25 AM"
+
+// Creator: Ankit Mishra
